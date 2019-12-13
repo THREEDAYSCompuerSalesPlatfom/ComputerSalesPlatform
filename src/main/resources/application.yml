@@ -1,7 +1,25 @@
-#DB Configuration:
-spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
-spring.datasource.url=jdbc:sqlserver://localhost:1433;DatabaseName=THREEDAYS
-spring.datasource.username=yta
-spring.datasource.password=123456
-
-
+##springboot+jdbc≈‰÷√
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=THREEDAYS
+    username: yta
+    password: 123456
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    servlet:
+      content-type: text/html
+##servlet≈‰÷√
+server:
+  servlet:
+    context-path: /
+##mybatis≈‰÷√
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.demo.POJO
+  mapper-locations: mapper/*.xml
