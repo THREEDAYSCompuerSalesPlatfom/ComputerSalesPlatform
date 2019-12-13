@@ -1,4 +1,4 @@
-package com.THREEDAYS.model;
+package com.THREEDAYS.POJO;
 
 import java.math.BigInteger;
 
