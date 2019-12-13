@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.THREEDAYS.dao.CartMapper">
+    <!-- parameterType:参数类型,填写实体类的完整名字 -->
+    <insert id="save" parameterType="com.THREEDAYS.POJO.Cart">
+        insert into net_t_emp values(net_t_emp_seq.nextval,#{name},#{age})
+    </insert>
+
+    <select id="findAll" parameterType="com.THREEDAYS.POJO.Cart">
+
+    </select>
+
+    <update id="modify" parameterType="com.THREEDAYS.POJO.Cart">
+
+    </update>
+
+    <delete id="delete" parameterType="com.THREEDAYS.POJO.Cart">
+
+    </delete>
+
+
+    <!-- 使用resultMap解决表的字段名与实体类的属性名不一致的情况 -->
+    <resultMap type="com.THREEDAYS.POJO.Cart" id="CartMap">
+        <result property="empNo" column="id" javaType=""/>
+        <result property="ename" column="name"/>
+    </resultMap>
+
+</mapper>
